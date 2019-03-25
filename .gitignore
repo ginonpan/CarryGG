@@ -1,0 +1,11 @@
+.gitconfig
+
+# Binaries for programs and plugins
+*.exe
+
+# Project-local dependency files
+.glide/
+vendor/
+
+# avoid to be mixed config for production or staging
+config/*.toml
