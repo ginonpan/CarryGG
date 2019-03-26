@@ -18,18 +18,18 @@ func Get(url string) (obj Object, err error) {
 	}
 	if err != nil {
 		log.Println(err)
-		return obj, err
+		return
 	}
 
 	body, err := ioutil.ReadAll(res.Body)
 	if err != nil {
 		log.Println(err)
-		return obj, err
+		return
 	}
 
 	if err = json.Unmarshal(body, &obj); err != nil {
 		log.Println(err)
-		return obj, err
+		return
 	}
-	return obj, nil
+	return
 }
